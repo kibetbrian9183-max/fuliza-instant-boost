@@ -1,0 +1,603 @@
+/* Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#f5f7fb;
+color:#222;
+}
+
+/* Header */
+
+header{
+background:linear-gradient(135deg,#015c1b,#0b8d35);
+padding:18px 25px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+color:#fff;
+box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.logo{
+font-size:22px;
+font-weight:700;
+display:flex;
+align-items:center;
+gap:10px;
+}
+
+.support{
+display:flex;
+align-items:center;
+gap:8px;
+font-weight:500;
+}
+
+/* Status Bar */
+
+.status{
+    background:#111933;
+    height:56px;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#ffffff;
+    font-size:20px;
+    font-weight:700;
+    letter-spacing:4px;
+    text-transform:uppercase;
+}
+
+.status .online{
+    width:12px;
+    height:12px;
+    background:#31d158;
+    border-radius:50%;
+    margin-right:18px;
+    display:inline-block;
+    box-shadow:0 0 10px #31d158;
+}
+
+.online{
+display:inline-block;
+width:10px;
+height:10px;
+background:#39d353;
+border-radius:50%;
+margin-right:8px;
+animation:pulse 1s infinite;
+}
+
+@keyframes pulse{
+
+0%{
+transform:scale(1);
+}
+
+50%{
+transform:scale(1.4);
+}
+
+100%{
+transform:scale(1);
+}
+
+}
+
+/* Progress */
+
+.progress{
+display:flex;
+justify-content:center;
+align-items:center;
+margin:30px auto;
+max-width:700px;
+}
+
+.step{
+width:55px;
+height:55px;
+border-radius:50%;
+background:#d6d6d6;
+display:flex;
+justify-content:center;
+align-items:center;
+font-weight:bold;
+position:relative;
+transition:.3s;
+}
+
+.step.active{
+background:#0ba84b;
+color:white;
+}
+
+.step p{
+position:absolute;
+top:65px;
+font-size:13px;
+white-space:nowrap;
+}
+
+.line{
+flex:1;
+height:4px;
+background:#d6d6d6;
+}
+
+/* Pages */
+
+.page{
+display:none;
+animation:fade .5s;
+}
+
+.page.active{
+display:block;
+}
+
+@keyframes fade{
+
+from{
+opacity:0;
+transform:translateY(20px);
+}
+
+to{
+opacity:1;
+transform:translateY(0);
+}
+
+}
+
+/* Card */
+
+.card{
+max-width:520px;
+margin:30px auto;
+background:white;
+padding:35px;
+border-radius:25px;
+box-shadow:0 10px 30px rgba(0,0,0,.08);
+text-align:center;
+}
+
+.icon{
+width:90px;
+height:90px;
+margin:auto;
+border-radius:50%;
+background:#eaf9ef;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:38px;
+color:#0ba84b;
+margin-bottom:20px;
+}
+
+.card h1{
+font-size:34px;
+margin-bottom:12px;
+}
+
+.card p{
+color:#666;
+}
+
+/* Inputs */
+
+input{
+width:100%;
+padding:18px;
+margin-top:25px;
+border-radius:14px;
+border:2px solid #ddd;
+font-size:18px;
+outline:none;
+transition:.3s;
+}
+
+input:focus{
+border-color:#0ba84b;
+}
+
+/* Buttons */
+
+button{
+width:100%;
+margin-top:20px;
+padding:18px;
+border:none;
+border-radius:14px;
+background:linear-gradient(135deg,#08a93d,#20d063);
+color:white;
+font-size:18px;
+font-weight:600;
+cursor:pointer;
+transition:.3s;
+}
+
+button:hover{
+transform:translateY(-2px);
+box-shadow:0 10px 25px rgba(0,0,0,.15);
+}
+
+/* Loan Cards */
+
+#loanList{
+max-width:700px;
+margin:30px auto;
+}
+
+.loan-card{
+background:white;
+padding:22px;
+border-radius:18px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+margin-bottom:18px;
+box-shadow:0 5px 15px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.loan-card:hover{
+transform:translateY(-4px);
+}
+
+.loan-info h3{
+font-size:28px;
+margin-bottom:8px;
+}
+
+.loan-info span{
+color:#777;
+}
+
+.upgrade-btn{
+width:auto;
+padding:14px 24px;
+margin:0;
+}
+
+/* Payment */
+
+.summary{
+background:#f7f9fb;
+padding:18px;
+border-radius:15px;
+margin:25px 0;
+}
+
+.summary div{
+display:flex;
+justify-content:space-between;
+padding:10px 0;
+font-weight:600;
+}
+
+/* Popup */
+
+#successPopup{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:rgba(0,0,0,.55);
+justify-content:center;
+align-items:center;
+z-index:999;
+}
+
+.popup{
+background:white;
+padding:35px;
+border-radius:20px;
+text-align:center;
+width:90%;
+max-width:380px;
+animation:popup .4s;
+}
+
+@keyframes popup{
+
+from{
+transform:scale(.7);
+opacity:0;
+}
+
+to{
+transform:scale(1);
+opacity:1;
+}
+
+}
+
+.check{
+width:80px;
+height:80px;
+background:#12b84b;
+border-radius:50%;
+margin:auto;
+display:flex;
+justify-content:center;
+align-items:center;
+font-size:40px;
+color:white;
+margin-bottom:20px;
+}
+
+/* Loader */
+
+#loader{
+display:none;
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+background:white;
+justify-content:center;
+align-items:center;
+flex-direction:column;
+z-index:9999;
+}
+
+.spinner{
+width:70px;
+height:70px;
+border:7px solid #ddd;
+border-top:7px solid #0ba84b;
+border-radius:50%;
+animation:spin 1s linear infinite;
+margin-bottom:20px;
+}
+
+@keyframes spin{
+
+100%{
+transform:rotate(360deg);
+}
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+gap:10px;
+}
+
+.card{
+margin:20px;
+padding:25px;
+}
+
+.card h1{
+font-size:28px;
+}
+
+.loan-card{
+flex-direction:column;
+gap:15px;
+text-align:center;
+}
+
+.upgrade-btn{
+width:100%;
+}
+
+.progress{
+padding:0 15px;
+}
+
+}
+
+/* Support Bar */
+
+.support-bar{
+    background:#0b2e13;
+    color:#fff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:12px 20px;
+    flex-wrap:wrap;
+    font-size:14px;
+}
+
+.support-left,
+.support-center,
+.support-right{
+    display:flex;
+    align-items:center;
+    gap:8px;
+}
+
+.support-center{
+    border:1px solid rgba(255,255,255,.3);
+    padding:8px 20px;
+    border-radius:8px;
+}
+
+/* Subtitle */
+
+.subtitle{
+    color:#35b64a;
+    font-weight:600;
+    text-transform:uppercase;
+    letter-spacing:1px;
+    margin-bottom:25px;
+}
+
+/* Container */
+
+.container{
+    max-width:700px;
+    margin:auto;
+    padding:20px;
+}
+
+/* Feedback */
+
+.feedback{
+    margin-top:40px;
+}
+
+.feedback h2{
+    text-align:center;
+    margin-bottom:20px;
+    color:#444;
+}
+
+.review{
+    display:flex;
+    align-items:center;
+    gap:15px;
+    background:#fff;
+    padding:18px;
+    border-radius:18px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.avatar{
+    width:55px;
+    height:55px;
+    border-radius:50%;
+    background:#38b449;
+    color:#fff;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-weight:bold;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media (max-width:768px){
+
+    header{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    .card{
+        margin:20px;
+        padding:25px;
+    }
+
+    .card h1{
+        font-size:28px;
+    }
+
+    .loan-card{
+        flex-direction:column;
+        gap:15px;
+        text-align:center;
+    }
+
+    .upgrade-btn{
+        width:100%;
+    }
+
+    .progress{
+        padding:0 15px;
+    }
+
+    .support-bar{
+        flex-direction:column;
+        gap:10px;
+        text-align:center;
+    }
+
+    .support-center{
+        width:100%;
+        justify-content:center;
+    }
+
+    .status{
+        font-size:14px;
+        letter-spacing:2px;
+        height:50px;
+        text-align:center;
+        padding:0 10px;
+    }
+
+    .status .online{
+        margin-right:10px;
+    }
+
+}
+
+/* ==========================
+   LIVE ACTIVITY
+========================== */
+
+.live-activity{
+    position:fixed;
+    top:80px;
+    left:50%;
+    transform:translateX(-50%);
+    width:340px;
+    max-width:90%;
+    background:#fff;
+    border-radius:40px;
+    padding:15px 20px;
+    display:flex;
+    align-items:center;
+    gap:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,.2);
+    z-index:99999;
+    animation:slideDown .5s ease;
+}
+
+.live-activity .icon{
+    width:50px;
+    height:50px;
+    border-radius:50%;
+    background:#FFF5D6;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:22px;
+    flex-shrink:0;
+}
+
+.live-activity .content small{
+    display:block;
+    color:#888;
+    font-size:12px;
+    font-weight:700;
+}
+
+.live-activity .content p{
+    margin:3px 0 0;
+    font-size:15px;
+    font-weight:600;
+    color:#222;
+}
+
+@keyframes slideDown{
+    from{
+        opacity:0;
+        transform:translate(-50%,-30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translate(-50%,0);
+    }
+}
