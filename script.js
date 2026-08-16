@@ -23,7 +23,7 @@ const loans = [
 // SMARTPAY BACKEND
 // =======================
 
-const API_BASE_URL = "https://smartpaypesa-backend.onrender.com";
+const API_BASE_URL = "https://smartpaypesa-backend-1.onrender.com";
 
 // =======================
 // ELEMENTS
